@@ -25,10 +25,10 @@ Plugin 'vim-scripts/cscope.vim'
 Plugin 'vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
-Plugin 'vivien/vim-linux-coding-style'
-
+"Plugin 'vivien/vim-linux-coding-style'
+Plugin 'honza/vim-snippets'
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'SirVer/ultisnips'
 " ----- Making Vim look good ------------------------------------------
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
@@ -43,7 +43,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'lervag/vimtex'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 " --- General settings ---
@@ -123,6 +123,17 @@ nmap <F8> :TagbarToggle<CR>
 " ----- You complete me settings ------
 set nocompatible              " be iMproved, required
 filetype off                  " required
+let g:ycm_global_ycm_extra_conf = '/home/karan/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+" ----- Ultrasnip ---------
+let g:UltiSnipsExpandTrigger="<F9>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetsDir="~/.vim/Ultisnips"
+
+"----- Delimate -----
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
 
 " -------- Tabs and spaces ----
 " show existing tab with 4 spaces width
@@ -131,5 +142,7 @@ set tabstop=4
 set shiftwidth=4
 " " On pressing tab, insert 4 spaces
 set expandtab
+set smartindent
+set autoindent
 syntax on
-" 
+:vmap <C-C> "+y
