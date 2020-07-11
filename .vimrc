@@ -17,9 +17,9 @@ set ruler
 
 filetype off
 
-set rtp+=/home/singh882/.vim/bundle/Vundle.vim
+set rtp+=/home/karan/.vim/bundle/Vundle.vim
 call vundle#begin()
-                                                                                                                                                                                                            
+
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
@@ -41,10 +41,11 @@ let g:airline#extensions#tabline#enabled = 1
 
 "---------- Solarized settings -------------
 set t_ut= "https://sunaku.github.io/vim-256color-bce.html
+set t_Co=256
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
 
 "----------- Pathogen  ---------------------
 
